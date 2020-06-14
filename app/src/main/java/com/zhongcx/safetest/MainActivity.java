@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         // 04 禁止【认证信息使用不安全键盘】测试
         et_main_safe_key = findViewById(R.id.et_main_safe_key);
         keyboardUtil = new KeyboardUtil(this, findViewById(R.id.ll_main_content));
-        keyboardUtil.initKeyboard(MyKeyboardView.KEYBOARDTYPE_Only_Num_Pwd, false, et_main_safe_key);//安全键盘
+        keyboardUtil.initKeyboard(MyKeyboardView.KEYBOARDTYPE_ABC, false, et_main_safe_key);//安全键盘
 
         // 05 禁止【apk被篡改后二次打包】测试
         TextView tv_main_sha = findViewById(R.id.tv_main_sha);
