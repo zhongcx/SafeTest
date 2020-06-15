@@ -65,7 +65,9 @@ public class MainActivity extends AppCompatActivity {
         btn_main_log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i(MainActivity.this.getClass().getName(), "==测试");
+                if(BuildConfig.DEBUG){
+                    Log.i(MainActivity.this.getClass().getName(), "==测试");
+                }
             }
         });
 
@@ -120,7 +122,6 @@ public class MainActivity extends AppCompatActivity {
             BigInteger bi = new BigInteger(1, msgDigest.digest());
             String sha = bi.toString(16);
             fis.close();
-            Log.i(MainActivity.this.getClass().getName(),"==sha-->"+sha);
             return sha;
         } catch (Exception e) {
             e.printStackTrace();
